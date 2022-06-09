@@ -1,4 +1,6 @@
-// check the letters
+//--------------------------------------------------------
+//*** Checking the matching letters ********
+//--------------------------------------------------------
 const gameLogic = () => {
   createAlphabetFields();
   const checkItem = [];
@@ -24,7 +26,9 @@ const gameLogic = () => {
   });
 };
 
-// creat the alphabet
+//--------------------------------------------------------
+//*** Create the alphabet part ********
+//--------------------------------------------------------
 const createAlphabetFields = () => {
   for (const letterItem of alpahabetAll) {
     const alphabet = document.createElement("div");
@@ -34,13 +38,16 @@ const createAlphabetFields = () => {
   }
 };
 
-// create the field based on the specified word
+//--------------------------------------------------------
+//*** Create the fields based on the specified word ********
+//--------------------------------------------------------
 const createGameField = () => {
   for (let i = 0; i < inputWordLetter.length; i++) {
     let createLetterCube = document.createElement("div");
     gameField.append(createLetterCube);
     if (inputWordLetter[i] !== " ") {
       createLetterCube.dataset.id = inputWordLetter[i];
+      // Check the double consonant (this is hungarian language specific)
       if (
         (inputWordLetter[i] === "c" && inputWordLetter[i + 1] === "s") ||
         (inputWordLetter[i] === "d" && inputWordLetter[i + 1] === "z") ||
@@ -68,12 +75,16 @@ const createGameField = () => {
   }
 };
 
-// get the spcified letters of word
+//--------------------------------------------------------
+//*** Get the specified word of letters's id ********
+//--------------------------------------------------------
 const getLetterId = () => {
   letterIds = document.querySelectorAll(".letter-id");
 };
 
-// count the wrong letter
+//--------------------------------------------------------
+//*** Counting the remaining life / build the gallows ********
+//--------------------------------------------------------
 const life = () => {
   if (!matchLetter) {
     hangingMan.style.display = "block";
@@ -87,11 +98,13 @@ const life = () => {
   }
 };
 
-// check if win the player
+//--------------------------------------------------------
+//*** Winner issue ********
+//--------------------------------------------------------
 const winGame = () => {
   const specifiedWordLetter = document.querySelectorAll(".letter-id");
   const findAllLetters = [];
-  specifiedWordLetter.forEach(letterItem => {
+  specifiedWordLetter.forEach((letterItem) => {
     if (letterItem.textContent != "") {
       findAllLetters.push(letterItem.textContent);
     }
@@ -101,15 +114,19 @@ const winGame = () => {
   }
 };
 
+//--------------------------------------------------------
+//*** Inform the player if winning ********
+//--------------------------------------------------------
 const newGameCard = () => {
   endGameCard.style.display = "flex";
   endGameCard.firstElementChild.children[0].textContent = "Congratulation!";
-  endGameCard.firstElementChild.children[1].innerHTML =
-    "You WIN!!!	&#128526";
+  endGameCard.firstElementChild.children[1].innerHTML = "You WIN!!!	&#128526";
   lifeCounter = 0;
 };
 
-// end game
+//--------------------------------------------------------
+//*** Inform the player if losing ********
+//--------------------------------------------------------
 const endGame = () => {
   endGameCard.style.display = "flex";
   endGameCard.firstElementChild.children[0].textContent = "Sorry!";
@@ -118,6 +135,9 @@ const endGame = () => {
   lifeCounter = 0;
 };
 
+//--------------------------------------------------------
+//*** Start new game ********
+//--------------------------------------------------------
 const newGame = () => {
   gameField.innerHTML = "";
   alphabetContainer.innerHTML = "";

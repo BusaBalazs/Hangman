@@ -1,5 +1,5 @@
 //--------------------------------------------------------
-//************** SELECT DOM ELEMENTS ********
+//*** SELECT DOM ELEMENTS ********
 //--------------------------------------------------------
 
 const btn = document.getElementById("start-btn");
@@ -12,7 +12,7 @@ const endGameCard = document.querySelector(".end-game-bg");
 const newGameBtn = document.getElementById("new-btn");
 
 //--------------------------------------------------------
-//************** GAME LOGIC'S VARIABELS *********
+//*** GAME LOGIC'S VARIABELS *********
 //--------------------------------------------------------
 const alpahabetAll = [
   "a",
@@ -72,7 +72,7 @@ let matchLetter;
 let lifeCounter = 0;
 
 //--------------------------------------------------------
-//************** START GAME EVENT *********
+//*** START GAME EVENT *********
 //--------------------------------------------------------
 btn.addEventListener("click", () => {
   if (!inputWord.value) {
@@ -89,10 +89,3 @@ btn.addEventListener("click", () => {
 newGameBtn.addEventListener("click", () => {
   newGame();
 });
-
-let a = "t";
-let b = "g";
-
-if (a = b) {
-  console.log("jjjkkk");
-}
