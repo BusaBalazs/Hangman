@@ -1,0 +1,110 @@
+.hangman {
+  display: none;
+  position: relative;
+  width: 50%;
+  height: 150px;
+}
+
+.base,
+.stick,
+.stick-cross,
+.stick-down,
+.stick-side {
+  position: absolute;
+  background-color: rgb(70, 51, 0);
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.426);
+}
+
+.base {
+  width: 40px;
+  height: 8px;
+  left: calc(50% - 20px);
+  bottom: 0;
+}
+
+.stick {
+  width: 8px;
+  height: 150px;
+  left: calc(50% - 4px);
+  bottom: 0;
+}
+
+.stick-side {
+  width: 80px;
+  height: 8px;
+  left: calc(50%);
+  top: 0;
+}
+
+.stick-cross {
+  width: 60px;
+  height: 8px;
+  left: calc(50% - 10px);
+  top: 20px;
+  transform: rotate(-45deg);
+}
+
+.stick-down {
+  width: 8px;
+  height: 40px;
+  left: calc(50% + 72px);
+  top: 0;
+}
+
+.body,
+.head,
+.left-hand,
+.right-hand,
+.left-leg,
+.right-leg {
+  position: absolute;
+  background-color: rgb(215, 210, 168);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.438);
+}
+
+.head {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  left: calc(50% + 60px);
+  top: 35px;
+}
+
+.body {
+  width: 5px;
+  height: 30px;
+  left: calc(50% + 72px);
+  top: 64px;
+}
+
+.left-hand {
+  width: 3px;
+  height: 30px;
+  left: calc(50% + 62px);
+  top: 64px;
+  transform: rotate(40deg);
+}
+
+.right-hand {
+  width: 3px;
+  height: 30px;
+  left: calc(50% + 88px);
+  top: 60px;
+  transform: rotate(-70deg);
+}
+
+.left-leg {
+  width: 3px;
+  height: 30px;
+  left: calc(50% + 62px);
+  top: 87px;
+  transform: rotate(40deg);
+}
+
+.right-leg {
+  width: 3px;
+  height: 30px;
+  left: calc(50% + 82px);
+  top: 90px;
+  transform: rotate(-30deg);
+}

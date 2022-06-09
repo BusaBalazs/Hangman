@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@600;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link javascript files -->
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/game.js" defer></script>
+    <!-- link style -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/gallows.css" />
+    <title>Hang Man</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="title">
+            <h1 class=" vertical-title">Hang</h1>
+            <h1>man</h1>
+          </div>
+          
+          <p class="nav-motto">Warning! Maybe you will hanging!</p>
+        </div>
+      </nav>
+    </header>
+    <section class="game-field">
+      <!-- <div class="letter"></div> -->
+    </section>
+    <section class="alphabet-container"></section>
+    <section class="hangman">
+      <!-- <div class="base"></div>
+      <div class="stick"></div>
+      <div class="stick-side"></div>
+      <div class="stick-cross"></div>
+      <div class="stick-down"></div>
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="left-hand"></div>
+      <div class="right-hand"></div>
+      <div class="left-leg"></div>
+      <div class="right-leg"></div> -->
+    </section>
+    <div class="text-input">
+      <input type="text" id="input-word" placeholder="enter your word" />
+      <button type="submit" class="btn" id="start-btn">Start</button>
+    </div>
+
+    <div class="end-game-bg">
+      <aside class="end-game-card">
+        <h2 class="end-title">
+          Congratulations!
+        </h2>
+        <h3 class="end-game-status-text">
+          You Win! &#128523
+        </h3>
+        <button type="submit" class="btn" id="new-btn">New Game</button>
+      </aside>
+    </div>
+  </body>
+</html>
